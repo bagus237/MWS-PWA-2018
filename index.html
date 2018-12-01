@@ -1,0 +1,111 @@
+<html>
+
+<!-- Mirrored from bagus-kurniawan.firebaseapp.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Dec 2018 05:34:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+<style>
+
+  body{
+        width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+        background:#FFEFD5;
+    }
+   .container {
+        display: grid;
+        width: 100%;
+        grid-template-columns:  200px 200px 200px 200px 200px;
+        grid-template-rows: 50px 100px 100px 100px 100px 50px;
+        grid-gap: 4px;
+    }
+    .menu {
+        background: lightblue;
+        grid-column:1/6;
+    }
+    .sidebar {
+        background: lightyellow;
+        grid-row-start: 2;
+        grid-row-end: 6;
+       
+    }
+    .konten {
+        background: pink;
+        grid-column: 2/6;
+    }
+    .map-konten{
+        display:flex;
+        flex-wrap: wrap;
+    }
+    .footer {
+        background: lime;
+        grid-column: 1/6;
+        grid-row : 6/6;
+        text-align: center;
+        vertical-align: center;
+    } 
+    @media screen and (max-width:800px){
+        body{
+            width: 98%;
+        }   
+        .container {
+            display: grid;
+            width: 100%;
+            grid-template-columns:  100%;
+            grid-template-rows: 50px 100px 100px 100px 100px 100px 50px;
+            grid-gap: 4px;
+        }
+        .menu,.sidebar,.konten,.footer{
+            grid-column:1/1;
+        }
+        .menu {
+            background: lightblue;
+            grid-row : 1/1;
+        }
+        .sidebar {
+            background: lightyellow;
+            grid-row : 2/2;
+            text-align: center;
+        }
+        .sidebar img{
+            width: auto;
+            height: 100%;
+        }
+        .konten {
+            background: pink;
+        }
+        .footer {
+            background: lime;
+            text-align: center;
+            vertical-align: middle;
+            grid-row : 7/7;
+        } 
+    
+</style>
+<link rel="shortcut icon" type="image/png" href="images/kejar.jpg">
+		<link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+<div class="container">
+<div class='menu'><img src="images/kejar.jpg" height="100%" alt="kejar"></div>
+<div class='sidebar'><img src="images/bagus.jpg" max-wight="100%" height="auto"; alt="bagus"></div>
+<div class='konten'><a href="project1/add2numbers.html">Tugas Perjumlahan 2 Angka</a></div>
+<div id='mapid' class="konten" style="position:relative;" >    
+        <div style="height:20px; position: absolute;z-index:1200; "><a href="mapbox/index.html">Lokasi Istimewa dengan Mapbox</a></div>        
+  </div>
+  <div class='konten'> <div style="height:20px; position: absolute;z-index:1200; "><a href="fetch/index.html">Fetch JSON</a></div>    </div>  
+<div class='konten'> <div style="height:20px; position: absolute;z-index:1200; "><a href="resto/index.html">Review Restaurant</a></div>    </div>
+<div class='footer'>Muhamad Bagus Kurniawan</div>
+</div>
+<script type="application/javascript" src="js/main.js"></script>
+</body>
+
+
+
+
+<!-- Mirrored from bagus-kurniawan.firebaseapp.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Dec 2018 05:34:20 GMT -->
+</html>
+

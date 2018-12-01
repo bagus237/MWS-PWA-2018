@@ -1,0 +1,69 @@
+<html>
+    
+<!-- Mirrored from bagus-kurniawan.firebaseapp.com/mapbox/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Dec 2018 05:34:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+        <link rel="stylesheet" href="../../unpkg.com/leaflet%401.3.4/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin=""/>
+        <script src="../../unpkg.com/leaflet%401.3.4/dist/leaflet.js"
+        integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+        crossorigin=""></script>
+         
+        <title>Muhamad Bagus Kurniawan - Mobile Web Specialist</title>
+
+        
+        <meta name="description" content="Bagus Mobile Specialist 2018">
+        <meta name="theme-color" content=""/>
+
+        <link rel="shortcut icon" type="image/png" href="../images/kejar.jpg">
+        <link rel="manifest" href="../manifest.json">
+
+    </head>
+    <body>
+        <div class='container'>
+        <div class='menu'><img height="100%" width="50px" alt="Logo" src="../images/kejar.jpg"> <div class="tagline">Lokasi Istimewa</div></div>
+          <div class='back'><a href="../index.html">< Back</a></div>
+          
+            <div class='peta' id='mapid'> </div>
+            <div class='konten'>
+                <img src="../images/lengkong.jpg" width="100%" class="pp" alt="Desa Lengkong Wetan">
+            </div>
+            <div class='review' style="overflow-y: scroll;">
+                <p>Salah satu desa bersejarah yang luput dari perhatian publik adalah Desa Lengkong yang berada di wilayah Lengkong, Serpong, Tangerang Selatan. Desa yang memiliki Monumen Palagan Lengkong ini berada menjelang pintu masuk Damai Indah Golf di area Taman Daan Mogot dan menjadi area terdepan perumahan Bukit Golf Terrace BSD City. Berdirinya Monumen Palagan Lengkong dan Rumah Lengkong sendiri terkait sejarah perjuangan bangsa Indonesia. Kala itu, setelah pemerintahan sipil di Tangerang pulih, dibentuklah Resimen 4 Tangerang yang memusatkan perhatian pada masalah-masalah berkaitan dengan pertahanan. Dalam hal ini, di Tangerang masih terdapat markas besar dan persenjataan kuat Jepang yang dipimpin oleh Kapten Abe. Markas tersebut berada di Desa Lengkong Wetan, Kecamatan Serpong dan berada di bawah pengawasan sekutu di Bogor. Tersiarnya kabar Belanda yang berkedudukan di Bogor akan menguasai Parung dan kemudian Lengkong membuat Tentara Keamanan Rakyat (TKR) di Tangerang, terancam posisinya.
+
+Artikel ini telah tayang di Kompas.com dengan judul "Sekelumit Kisah di Balik Rumah Lengkong dan Gugurnya Daan Mogot".</p>
+            </div>
+          <div class='footer'><a target="_blank" href="http://baguskurniawan.cf/"> Muhamad Bagus Kurniawan - MWS</a></div>
+        </div>
+        <script>
+               
+            var mymap = L.map('mapid').setView([-6.279614,106.674265], 15);
+            L.tileLayer('../../api.tiles.mapbox.com/v4/%7bid%7d/%7bz%7d/%7bx%7d/%7by%7dc1c5.json?access_token=pk.eyJ1Ijoiam9zZWZiZXJuYWRpIiwiYSI6ImNqbTczaXE5bjQ0aDEza2xpaW9vanowaWUifQ.v0m0tmhUGwTrdYZ_zGzLYg', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 18,
+                id: 'mapbox.streets',
+                accessToken: 'pk.eyJ1IjoidWphbmdzYXJ1bmciLCJhIjoiY2ptNm5sbGpwMDFteTNydXE5a2JoNm9tMiJ9.wr9J0UgJAu9eqDrAm-KvWQ'
+            }).addTo(mymap);
+            var arr_marker= [
+            [[-6.279614, 106.674265],"<b>Desa Saya</b><br>Desa Lengkong Wetan" ],
+            ];
+            var i =0;
+            for (m of arr_marker) {
+                //L.marker(m[0]).addTo(mymap);
+                var marker = L.marker(m[0]).addTo(mymap);
+                if(i==0)
+                    marker.bindPopup(m[1]).openPopup();
+                else
+                    marker.bindPopup(m[1]);
+                i++;
+            }
+         
+
+        </script>
+    </body>
+
+<!-- Mirrored from bagus-kurniawan.firebaseapp.com/mapbox/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Dec 2018 05:34:22 GMT -->
+</html>
